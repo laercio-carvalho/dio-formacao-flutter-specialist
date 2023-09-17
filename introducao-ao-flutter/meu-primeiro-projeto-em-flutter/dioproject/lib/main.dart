@@ -28,10 +28,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Pagina de Demonstração'),
+      home: const MyHomePage(title: 'Pagina de Demonstração do Laércio'),
     );
   }
 }
@@ -65,6 +65,11 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
+    });
+  }
+  void _decrementCounter() {
+    setState(() {
+     _counter--;
     });
   }
 
@@ -107,22 +112,33 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text(
               'Esse botão foi pressionado essa quantidade de vezes:',
-              style: TextStyle(color: Colors.blue, fontSize: 13),
+              style: TextStyle(color: Colors.blue, fontSize: 13,),
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
-            Text(
-              'Este é um outro teste para trocar a posição e o estilo de texto ser outro', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+            const Text(
+              'Este é um outro teste para trocar '
+                  'a posição e o estilo de texto ser outro. É um texto feio e '
+                  'com cores misturadas e totalmente sem boa estéetica: '
+                  'Sim. Mas tô aprendendo. '
+                  'Nesse Texto eu também troquei o padrão de Incremente para Decremente',
+              style: TextStyle(
+                fontSize: 20,
+                backgroundColor: Colors.yellow,
+                color: Colors.red,
+                fontWeight: FontWeight.bold, decoration: TextDecoration.underline
+              ),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.photo_camera),
+        onPressed: _decrementCounter,
+        tooltip: 'Diminue',
+        child: const Icon(Icons.more_horiz_rounded),
+
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

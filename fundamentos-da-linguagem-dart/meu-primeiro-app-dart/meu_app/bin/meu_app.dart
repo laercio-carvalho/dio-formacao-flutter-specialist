@@ -7,7 +7,7 @@ var texto1 = "dio";
 void main(List<String> arguments) {
   int numero1 = 10;
   var numero2 = 11;
-  int numero3;
+  String numero3 = '42.23';
 
   List<String> lista1 = [];
   lista1.add("Laercio");
@@ -49,4 +49,9 @@ void main(List<String> arguments) {
   print("Converte String para Inteiro, se não coseguir informa que é null");
   print(int.parse("42"));
   print(int.tryParse("teste"));
+
+  print("Converte uma variavel dinamica para Double, se não coseguir informa que é null");
+  double.tryParse(numero3);
+  print(double.parse("42"));
+  print(numero3);
 }

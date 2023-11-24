@@ -25,6 +25,13 @@ void main(List<String> arguments) {
 
   var varTrue = true;
   bool varFalse = false;
+
+  List<String> lstString = [];
+  var lstInt = [1,10,50];
+  List lstDynamic = [];
+
+  Map<String, dynamic> map1 = Map<String, dynamic>();
+  var map = {'zero' : 0, 'one' : 1, 'two' : 2};
   //Final das variaveis
 
   print('A resposta universal para tudo : ${meu_app.calculate()}!');
@@ -148,4 +155,71 @@ void main(List<String> arguments) {
   print("Esta Negacao é ${!varTrue}");
   print("Esta negação é ${!varFalse}");
   print(varTrue == varFalse);
+
+  //Listas
+  print("Tamanho da Lista");
+  print(lstString.length);
+  print(lstInt.length);
+  print(lstDynamic.length);
+
+  print("Adicionar Item");
+  lstString.add("M");
+  lstString.add("B");
+  lstInt.add(90);
+  lstDynamic.add("A");
+  lstDynamic.add("10");
+  lstDynamic.add(9.8);
+  lstDynamic.add(true);
+
+  print(lstString);
+  print(lstInt);
+  print(lstDynamic);
+
+  print("Remover Item");
+  lstString.remove("M");
+  lstInt.remove(90);
+  lstDynamic.remove(9.8);
+
+  print(lstString);
+  print(lstInt);
+  print(lstDynamic);
+  
+  print("Verifica se a Lista está vazia");
+  print(lstString.isEmpty);
+  print(lstInt.isNotEmpty);
+  
+  print("Ver o valor da Lista");
+  print(lstString.contains("B"));
+  print(lstDynamic.contains(true));
+  
+  print("Função Where");
+  print(lstInt);
+  print(lstInt.where((x) => x > 9 && x < 99));
+
+  print("Reordenar de tras pra frente");
+  print(lstInt.reversed);
+
+  //Dados do tipo Map
+  print("Obtem valor pela chave");
+  print(map1);
+  print(map);
+
+  print(map["two"]);
+
+  map.addAll({'ten':10, 'eleven':11});
+
+  print("Tamanho");
+  print(map.length);
+
+  print(map.containsKey("eleven"));
+  print(map.containsKey("teste"));
+  
+  map1.addAll({"Nome": "Daniĺo"});
+  map1.addAll({"Idade": 39});
+  map1.addAll({"Casado": true});
+  map1.addAll({"Nascimento": DateTime(1982,12,28)});
+  print(map1);
+  print(map1["Idade"]);
+
+
 }

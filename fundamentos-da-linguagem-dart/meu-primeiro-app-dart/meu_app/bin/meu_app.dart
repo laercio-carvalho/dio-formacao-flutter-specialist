@@ -5,6 +5,8 @@ var texto1 = "dio";
 
 
 void main(List<String> arguments) {
+  //Começo das variaveis
+
   int numero1 = 10;
   var numero2 = 11;
   String numero3 = '42.23';
@@ -14,9 +16,10 @@ void main(List<String> arguments) {
   var lista2 = [];
   lista2.add(2);
   lista2.add(" Ricardo");
-  
-  
 
+  double numero4 = 10.1;
+  var numero5 = 11.9;
+  //Final das variaveis
 
   print('A resposta universal para tudo : ${meu_app.calculate()}!');
   print('Eu não ousaria apagar o que o grande mochileiro nos revelou.');
@@ -54,4 +57,37 @@ void main(List<String> arguments) {
   double.tryParse(numero3);
   print(double.parse("42"));
   print(numero3);
+
+  print("Remove Ponto flutuante");
+  print(numero4.truncate());
+  
+  print("Converte para inteiros");
+  print(numero5.toInt());
+
+  print("Arredonda para cima");
+  print(numero5.ceil());
+
+  print("Arredonda para baixo");
+  print(numero4.floor());
+  print(numero5.floor());
+
+  print("Retorna se o numero é infinito");
+  print(numero4.isInfinite);
+  print(numero5.isInfinite);
+
+  print("Retorna se o numero é infinito");
+  print(numero4.isFinite);
+  print(numero5.isFinite);
+
+  print("Retorna se o numero é Valido");
+  print(numero4.isNaN);
+  print(numero5.isNaN);
+
+  print("Retorna se o numero é Negativo");
+  print(numero4.isNegative);
+  print((numero4-numero5).isNegative);
+
+  print("Converte String para Double");
+  print(double.parse("10.123"));
+  print(double.tryParse("Teste"));
 }

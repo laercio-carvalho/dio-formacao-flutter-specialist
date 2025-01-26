@@ -5,5 +5,5 @@ double taxa_importacao(){
   return 1.60;
 }
 double icms(){
-  return 1.3;
+  return 1.27;
 }
